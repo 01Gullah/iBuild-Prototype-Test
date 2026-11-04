@@ -1,0 +1,12 @@
+
+[build]
+  command = "unzip -o prototype-preview.zip -d prototype-preview && cd prototype-preview && npm install && npm run build"
+  publish = "prototype-preview/dist"
+
+[build.environment]
+  NODE_VERSION = "22"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
